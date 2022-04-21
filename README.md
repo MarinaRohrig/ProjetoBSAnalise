@@ -8,8 +8,8 @@ Da analise vai ser calculado FATURAMENTO por loja, QUANTIDADE VENDIDA por loja e
 
 As informações serão enviadas por e-mail. 
 
-~Linguagem usada: PYTHON~
+----- Linguagem usada: PYTHON -----
 
-##Autor
+## Autor
 - Marina
 
