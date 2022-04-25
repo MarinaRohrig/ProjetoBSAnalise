@@ -54,5 +54,5 @@ Para dúvidas estou a disposição.
 Att. Marina ~~
 '''
 mail.Display()
-print ('Email enviado!')
+print ('Pronto para ser enviado!')
 
