@@ -12,18 +12,22 @@
 # 6. Gerar relatórios com base nos resultados dos cálculos;
 # 7. Enviar por e-mail os relatórios.
 
-
-#vai importar a biblioteca pandas, que lida com planilhas e trata ela como pd
+# vai importar a biblioteca pandas, que lida com planilhas e trata ela como pd
 import pandas as pd
-#importacao da base de dados
+
+# importa o excel
 tabela_vendas = pd.read_excel('Vendas.xlsx')
-#mostrar todas as colunas
+# mostrar todas as colunas
 pd.set_option('display.max_columns', None)
-
-print(tabela_vendas)
-
-
-
+# faturamento
+fat = tabela_vendas[['ID Loja','Valor Final']].groupby('ID Loja').sum()
+# quantidade de prod vend por loja
+prodvend = tabela_vendas[['ID Loja','Quantidade']].groupby('ID Loja').sum()
+# ticket medio e transforma em tabela o resultado com to_frame
+ticket_medio = (fat['Valor Final'] / prodvend['Quantidade']).to_frame()
+print('*-'*30)
+print(ticket_medio)
+print('*-'*30)
 
 
 
