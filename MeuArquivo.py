@@ -12,5 +12,18 @@
 # 6. Gerar relatórios com base nos resultados dos cálculos;
 # 7. Enviar por e-mail os relatórios.
 
-import pandas as pd
+
 #vai importar a biblioteca pandas, que lida com planilhas e trata ela como pd
+import pandas as pd
+#importacao da base de dados
+tabela_vendas = pd.read_excel('Vendas.xlsx')
+#mostrar todas as colunas
+pd.set_option('display.max_columns', None)
+
+print(tabela_vendas)
+
+
+
+
+
+
